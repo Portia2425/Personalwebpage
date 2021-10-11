@@ -1,0 +1,228 @@
+* , *::before, *::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url(/img/lake2.jpg);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    animation: shrink 4s infinite alternate;
+}
+
+/* header */
+.navbar {
+    display: flex;
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+}
+
+.navButtons {
+    flex: 1;
+    padding: 15px;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    font-family: "sequel";
+    text-decoration: none;
+}
+
+.navButtons:hover {
+    cursor: pointer;
+}
+
+.navButtons::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: white;
+    transition: width 0.85s ease-out;
+}
+
+.navButtons:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.logo {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.fas {
+    float: right;
+    color: rgba(255,255,255, 0.5);
+    padding: 25px 25px;
+    transition: color 0.35s ease-in-out;
+}
+
+.fas:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.slogan {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-family: "sequel";
+    font-size: 70px;
+}
+
+/* content */
+section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+#left {
+    flex:70%;
+    color: white;
+    text-align: center;
+    font-family: "Muli";
+}
+
+.info {
+    font-size: 35px;
+}
+
+.images_ {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.pics {
+    border-radius: 55%;
+    margin:7px 90px;
+}
+
+.transition-one, .transition-two, .transition-three {
+    position: relative;
+    filter: grayscale(0);
+    transition: greyscale 0.5s;
+}
+
+.transition-one:hover, .transition-two:hover, .transition-three:hover {
+    filter: grayscale(100);
+}
+
+.overlay-one, .overlay-two, .overlay-three {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Muli";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.overlay-one:hover, .overlay-two:hover, .overlay-three:hover {
+    opacity: 1;
+}
+
+#right {
+    text-align: center;
+    justify-content: center;
+    font-family: "Muli";
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    flex: 30%;
+    margin: 70px;
+    border-radius: 20px;
+    height: 640px;
+}
+
+h3 {
+    font-size: 45px;
+}
+
+.find-us {
+    font-size: 35px;
+}
+
+input[type=email], input[type=name] {
+    padding: 2px 2px;
+    font-size: 35px;
+    border: none;
+    border-bottom: 4px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+textarea {
+    background-color: transparent;
+    border: white;
+    color: white;
+    font-size: 30px;
+    border-width: 4px;
+    border-style: inset;
+}
+
+.submit {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.submit:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    border: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+
+.fab {
+    margin-top: 10px;
+    color: rgba(255,255,255, 0.5);
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: color 0.35s ease-in-out;
+}
+
+.fab:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.footer {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: "Muli";
+    font-size: 25px;
+    position: fixed;
+    bottom: 0;
+}
+
+/* background image keyframe */
+@keyframes shrink {
+    0% {
+      background-size: 112% 112%;
+    }
+    100% {
+      background-size: 110% 110%;
+      }
+  }
