@@ -7,6 +7,7 @@
         <title>Three Waters</title>
         <link href="personalwebpage.css" rel="stylesheet" type="text/css">
         <script src="https://kit.fontawesome.com/7e86ec48bc.js" crossorigin="anonymous"></script>
+        <script src="personalwebpage.js"></script>
         <style>
             @import url('http://fonts.cdnfonts.com/css/sequel');
         </style>
@@ -15,63 +16,111 @@
     <body>
         <!-- header -->
         <header>
-            <div class="navbar">
+            <div id="navbar">
                 <!-- navigation buttons -->
-                <a class="navButtons" href="#">Home</a>
-                <a class="navButtons" href="#">Background</a>
-                <img class="logo" src="/img/threewaters-logo-primary.png" width=380px height="80px"> 
-                <a class="navButtons" href="#">More information</a>
-                <a class="navButtons" href="#">Contact us</a>
-                <a href="https://www.dia.govt.nz/Three-Waters-Reform-Programme" target="_blank">
-                    <i class="fas fa-info fa-2x"></i>
-                </a>
-                <a href="#"><i class="fas fa-search fa-2x"></i></a>
+                <a class="navButtons" href="#slogan">Home</a>
+
+                <a class="navButtons" href="#background">Background</a>
+
+                <img class="logo" src="/Personalwebpage/img/threewaters-logo-primary.png" width=420px height="90px"> 
+
+                <a class="navButtons" href="#moreInformation">More information</a>
+
+                <a class="navButtons" href="#contactUs">Contact us</a>
+
+                <a href="#"><i class="fas fa-question fa-2x"></i></a>
             </div>
         </header>
 
-        
-        <div class="slogan">
-            <h1> Better water is <br> better for everyone</h1>
+        <!-- homepage content -->
+        <div id="slogan">
+            <div class="slogan-search">
+                <h1 class="catchphrase"> Better water is <br> better for everyone</h1>
+
+                <div class="searchbox">
+                    <label></label><input type="text" placeholder="Search">
+                    <a class="search-button" href="#">
+                        <i class="fas fa-search fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            
         </div>
 
-        <section>
-            <!-- Left column content -->
-            <div id ="left">
-                <p class="info">
-                    All New Zealanders deserve safe, reliable and affordable water services that support good health, <br> and sustainable environmental outcomes.<br> <br> But, Aotearoa’s drinking water, wastewater and stormwater - our three waters - networks are facing <br> a crisis and will continue to do so without big changes.<br> <br>
-                    He puna wai, He puna ora.
-                </p>
+        
 
+        <!-- Info and pic section -->
+        <section>
+            <div id="extraInfo">
+                <p class="extraPara">
+                    All New Zealanders deserve safe, reliable and affordable water services that support good health <br> and sustainable environmental outcomes.
+                    <br><br> But, Aotearoa’s drinking water, wastewater and stormwater - our three waters - networks are facing a crisis <br> and will continue to do so without big changes.
+                    <br><br>The Government, working with councils, is proposing to build a better system for our three waters that is <br> still owned by the communities it serves. <br><br>
+                    Better water is better for everyone. He puna wai, He puna ora.
+                </p>
+    
                 <div class="images_">
-                    <div class="transition-one">
-                        <img class="pics" src="/img/three waters 1.png">
-                        <div class="overlay-one">
-                            <h5>Drinking Water</h5>
+                    <div class="transition">
+                        <img class="pics" src="/Personalwebpage/img/three waters 1.png">
+                        <div class="overlay">
+                            <h5>Drinking <br> Water</h5>
                         </div>
                     </div>
-
-                    <div class="transition-two">
-                        <img class="pics" src="/img/three waters 2.png">
-                        <div class="overlay-two">
+    
+                    <div class="transition">
+                        <img class="pics" src="/Personalwebpage/img/three waters 2.png">
+                        <div class="overlay overlay--primary">
                             <h5>Wastewater</h5>
                         </div>
                     </div>
-
-                    <div class="transition-three">
-                        <img class="pics" src="/img/three waters 3.png">
-                        <div class="overlay-three">
+    
+                    <div class="transition">
+                        <img class="pics" src="/Personalwebpage/img/three waters 3.png">
+                        <div class="overlay">
                             <h5>Stormwater</h5>
                         </div>
                     </div>
-                </div>
+                 </div>
             </div>
+        </section>
 
-            <!-- right column content -->
-            <div id="right">
+        <!-- Background section -->
+        <section id="background">
+            <dic id="Column" class="leftColumn">
+
+            </dic>
+
+            <dic id="Column" class="middleColumn">
+                
+            </dic>
+
+            <dic id="Column" class="rightColumn">
+                
+            </dic>
+            
+        </section>
+
+        <!-- More information section -->
+        <section id="moreInformation">
+            <p class="moreInfoPara">
+                More Information <br><br>
+                The Three Waters Reform Programme is a major, intergenerational project. It aims to <br> ensure that New Zealand’s three waters - our drinking water, wastewater and <br> stormwater - infrastructure and services are planned, maintained and delivered so that <br> these networks are affordable and fit for purpose. The current situation does not achieve <br> this for all communities. <br> <br>
+                Today, on behalf of their communities, 67 different councils own and operate the <br> majority of the drinking water, wastewater and stormwater services across Aotearoa. <br> <br>
+                Working with councils, the Government proposes to establish four new publicly - owned <br> multi - regional entities that benefit from scale and operational efficiencies and reflect <br> neighbouring catchments and communities of interest. Central to this plan is our <br> ongoing partnership with the local government sector and mana whenua. <br><br>
+                To see how these decisions would impact your households three waters services costs,<br> go to your Local Dashboard.<br><br>
+                We’re taking a long-term view, building a system that will deliver better health and <br> wellbeing outcomes for our communities and that protects our environment for <br> generations to come. <br><br>
+                For the latest Government announcement of $2.5 billion to support councils through the <br> proposed reforms to New Zealand’s drinking water, wastewater and stormwater <br> services, see the Beehive website. <br><br>
+                For more information about our journey so far, go to: Three Waters Reform Programme.
+            </p>
+        </section>
+
+        <!-- Contact us section -->
+        <section>
+            <div id="contactUs">
                 <h3> Get in touch</h3>
                 <p class="find-us">Please contact us with any queries.</p>
 
-                <form action="mailto:nfo@dia.govt.nz.">
+                <form action="mailto:info@dia.govt.nz.">
                     <label></label><input type="name" name="name" placeholder="Name"> <br> <br>
                     <label></label><input type="email" name="email" placeholder="Email"> <br> <br>
                     <textarea>Your message</textarea> <br> <br>
@@ -79,6 +128,7 @@
                     value="Submit">
                 </form>
 
+                <!-- social icons/links -->
                 <a href="https://www.facebook.com/ThreeWatersNZGovt" target="_blank">
                     <i class="fab fa-facebook fa-3x"></i>
                 </a>
