@@ -1,6 +1,7 @@
-var prevScrollpos = window.pageYOffset;
+// scrollable navbar
+let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
+  let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar").style.top = "0";
   } else {
@@ -8,3 +9,14 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 } 
+
+// pop up form
+document.getElementById('contactButton').addEventListener('click', 
+function() {
+  document.querySelector('.contactUs').style.display = 'flex';
+});
+
+document.querySelector('.close').addEventListener('click', 
+function() {
+  document.querySelector('.contactUs').style.display = 'none';
+});

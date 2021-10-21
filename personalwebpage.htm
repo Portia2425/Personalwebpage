@@ -7,7 +7,6 @@
         <title>Three Waters</title>
         <link href="personalwebpage.css" rel="stylesheet" type="text/css">
         <script src="https://kit.fontawesome.com/7e86ec48bc.js" crossorigin="anonymous"></script>
-        <script src="personalwebpage.js"></script>
         <style>
             @import url('http://fonts.cdnfonts.com/css/sequel');
         </style>
@@ -15,20 +14,14 @@
 
     <body>
         <!-- header -->
-        <header>
+        <header id="topWebsite">
             <div id="navbar">
                 <!-- navigation buttons -->
-                <a class="navButtons" href="#slogan">Home</a>
-
-                <a class="navButtons" href="#background">Background</a>
-
-                <img class="logo" src="/Personalwebpage/img/threewaters-logo-primary.png" width=420px height="90px"> 
-
-                <a class="navButtons" href="#moreInformation">More information</a>
-
-                <a class="navButtons" href="#contactUs">Contact us</a>
-
-                <a href="#"><i class="fas fa-question fa-2x"></i></a>
+                <button id="homeButton" class="navButtons" onclick='window.scrollTo({top: 0, behavior: "smooth"});'>Home</button>
+                <a id="navigationButtons" class="navButtons" href="#background">Background</a>
+                <img class="logo" src="/img/threewaters-logo-primary.png" width=420px height="90px"> 
+                <a id="navigationButtons" class="navButtons" href="#moreInformation">More information</a>
+                <button id="contactButton" class="navButtons" onclick='window.scrollTo({top: 0, behavior: "smooth"});'>Contact us</button>
             </div>
         </header>
 
@@ -37,17 +30,26 @@
             <div class="slogan-search">
                 <h1 class="catchphrase"> Better water is <br> better for everyone</h1>
 
-                <div class="searchbox">
-                    <label></label><input type="text" placeholder="Search">
-                    <a class="search-button" href="#">
-                        <i class="fas fa-search fa-2x"></i>
+                <!-- social icons/links -->
+                <div id="socialLinks">
+                    <a href="https://www.facebook.com/ThreeWatersNZGovt" target="_blank">
+                        <i class="fab fa-facebook fa-4x"></i>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/ThreeWatersNZ/" target="_blank">
+                        <i class="fab fa-instagram fa-4x"></i>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/c/threewatersnz" target="_blank">
+                        <i class="fab fa-youtube fa-4x"></i>
+                    </a>
+                    
+                    <a href="https://twitter.com/threewatersnz" target="_blank">
+                        <i class="fab fa-twitter fa-4x"></i>
                     </a>
                 </div>
             </div>
-            
         </div>
-
-        
 
         <!-- Info and pic section -->
         <section>
@@ -61,21 +63,21 @@
     
                 <div class="images_">
                     <div class="transition">
-                        <img class="pics" src="/Personalwebpage/img/three waters 1.png">
+                        <img class="pics" src="/img/three waters 1.png">
                         <div class="overlay">
                             <h5>Drinking <br> Water</h5>
                         </div>
                     </div>
     
                     <div class="transition">
-                        <img class="pics" src="/Personalwebpage/img/three waters 2.png">
+                        <img class="pics" src="/img/three waters 2.png">
                         <div class="overlay overlay--primary">
                             <h5>Wastewater</h5>
                         </div>
                     </div>
     
                     <div class="transition">
-                        <img class="pics" src="/Personalwebpage/img/three waters 3.png">
+                        <img class="pics" src="/img/three waters 3.png">
                         <div class="overlay">
                             <h5>Stormwater</h5>
                         </div>
@@ -86,18 +88,17 @@
 
         <!-- Background section -->
         <section id="background">
-            <dic id="Column" class="leftColumn">
+            <div id="Column" class="leftColumn">
 
-            </dic>
+            </div>
 
-            <dic id="Column" class="middleColumn">
+            <div id="Column" class="middleColumn">
                 
-            </dic>
+            </div>
 
-            <dic id="Column" class="rightColumn">
+            <div id="Column" class="rightColumn">
                 
-            </dic>
-            
+            </div>  
         </section>
 
         <!-- More information section -->
@@ -114,37 +115,32 @@
             </p>
         </section>
 
+
+        <!-- FAQ section -->
+        <section>
+            <div>
+                
+            </div>
+        </section>
+
         <!-- Contact us section -->
         <section>
-            <div id="contactUs">
-                <h3> Get in touch</h3>
-                <p class="find-us">Please contact us with any queries.</p>
+            <div class="contactUs">
+                <div id="formContent">
+                    <div class="close">+</div>
+                    <img src="img/threewaters-logo-primary.png" width="400px" height="100px">
+                    <h3> Get in touch</h3>
+                    <p class="find-us">Please contact us with any queries.</p>
 
-                <form action="mailto:info@dia.govt.nz.">
-                    <label></label><input type="name" name="name" placeholder="Name"> <br> <br>
-                    <label></label><input type="email" name="email" placeholder="Email"> <br> <br>
-                    <textarea>Your message</textarea> <br> <br>
-                    <input class="submit" type="submit" 
-                    value="Submit">
-                </form>
-
-                <!-- social icons/links -->
-                <a href="https://www.facebook.com/ThreeWatersNZGovt" target="_blank">
-                    <i class="fab fa-facebook fa-3x"></i>
-                </a>
-                
-                <a href="https://www.instagram.com/ThreeWatersNZ/" target="_blank">
-                    <i class="fab fa-instagram fa-3x"></i>
-                </a>
-                
-                <a href="https://www.youtube.com/c/threewatersnz" target="_blank">
-                    <i class="fab fa-youtube fa-3x"></i>
-                </a>
-                
-                <a href="https://twitter.com/threewatersnz" target="_blank">
-                    <i class="fab fa-twitter fa-3x"></i>
-                </a>
-            </div>
+                    <form action="mailto:info@dia.govt.nz.">
+                        <label></label><input type="name" name="name" placeholder="Name"> <br> <br>
+                        <label></label><input type="email" name="email" placeholder="Email"> <br> <br>
+                        <textarea placeholder="Your message"></textarea> <br> <br>
+                        <input class="submit" type="submit" 
+                        value="Submit">
+                    </form>
+                </div>
+            </div>  
         </section>
 
         <!-- footer -->
@@ -153,4 +149,6 @@
         </div>
 
     </body>
+
+    <script src="personalwebpage.js"></script>
 </html>

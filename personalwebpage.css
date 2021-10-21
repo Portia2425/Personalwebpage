@@ -10,7 +10,7 @@ html {
 /* header */
 #navbar {
     display: flex;
-    padding: 50px 30px;
+    padding: 40px 30px;
     background-color: rgb(38, 69, 95);
     justify-content: center;
     position: fixed;
@@ -21,6 +21,16 @@ html {
 }
 
 /* navigation buttons */
+#contactButton, #homeButton {
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#navigationButtons {
+    padding-top: 25px;
+}
+
 .navButtons {
     flex: 1;
     padding: 15px;
@@ -59,68 +69,25 @@ html {
     padding-left: 50px;
 }
 
-/* header icon style */
-.fas {
-    float: right;
-    color: rgba(255,255,255, 0.5);
-    padding: 25px 40px 25px 40px;
-    transition: color 0.35s ease-in-out;
-}
-
-.fas:hover {
-    color: white;
-    cursor: pointer;
-}
-
 /* content */
 /* slogan style */
 #slogan {
     margin-top: 170px;
     padding: 0;
-    background-image: url(/Personalwebpage/img/lake.jpg);
+    background-image: url(/img/lake.jpg);
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: cover;
     width: 100%;
-    height: 1200px;
+    height: 1250px;
     text-align: center;
     justify-content: center;
     position: relative;
     animation: shrink 4s infinite alternate;
 }
 
-.slogan-search {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-
-}
-
-.catchphrase {
-    color: white;
-    font-family: "sequel";
-    font-size: 140px;
-    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
-}
-
-.searchbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-input[type=text] {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 40px;
-}
-
  /* background image keyframe */
-@keyframes shrink {
+ @keyframes shrink {
     0% {
         background-size: 112% 112%;
     }
@@ -132,6 +99,20 @@ input[type=text] {
     100% {
         background-size: 110% 110%;
     }
+}
+
+.slogan-search {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.catchphrase {
+    color: white;
+    font-family: "sequel";
+    font-size: 160px;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 
 #extraInfo {
@@ -218,12 +199,51 @@ input[type=text] {
     color: white;
 }
 
+.contactUs {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 100;
+    display: none;
+}
+
+#formContent {
+    width: 900px;
+    height: 700px;
+    background-color: rgb(33, 75, 114);
+    text-align: center;
+    padding: 50px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 65px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    color: white;
+}
+
 h3 {
+    padding-top: 40px;
+    padding-bottom: 10px;
     font-size: 45px;
+    color: white;
 }
 
 .find-us {
+    padding-top: 10px;
+    padding-bottom: 20px;
     font-size: 35px;
+    color: white;
 }
 
 input[type=email], input[type=name] {
@@ -255,9 +275,10 @@ textarea {
 }
 
 .submit:hover {
-    background-color:rgba(0, 0, 0, 0.5);
-    border: rgba(0, 0, 0, 0.5);
+    background-color:white;
+    border: white;
     border-radius: 12px;
+    color: rgb(33, 75, 114);
 }
 
 .fab {
@@ -273,6 +294,7 @@ textarea {
     cursor: pointer;
 }
 
+
 .footer {
     padding: 10px 20px;
     width: 100%;
@@ -280,8 +302,6 @@ textarea {
     color: white;
     font-family: "Muli";
     font-size: 30px;
-    position: fixed;
-    bottom: 0;
 }
 
 
