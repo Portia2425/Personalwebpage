@@ -12,12 +12,18 @@ html {
     display: flex;
     padding: 40px 30px;
     background-color: rgb(38, 69, 95);
-    justify-content: center;
+    align-content: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
     transition: top 0.3s;
+}
+
+.header {
+    display: flex;
+    width: 85%;
+    justify-content: space-evenly;
 }
 
 /* navigation buttons */
@@ -27,12 +33,8 @@ html {
     border-color: transparent;
 }
 
-#navigationButtons {
-    padding-top: 25px;
-}
 
 .navButtons {
-    flex: 1;
     padding: 15px;
     font-size: 40px;
     text-align: center;
@@ -54,7 +56,7 @@ html {
     width: 0;
     height: 6px;
     background-color: white;
-    transition: width 0.85s ease-out;
+    transition: width 0.65s ease-out;
 }
 
 .navButtons:hover::after {
@@ -67,6 +69,7 @@ html {
 .logo {
     padding-right: 50px;
     padding-left: 50px;
+    float: left;
 }
 
 /* content */
@@ -74,7 +77,7 @@ html {
 #slogan {
     margin-top: 170px;
     padding: 0;
-    background-image: url(/img/lake.jpg);
+    background-image: url(/img/background.jpg);
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: cover;
@@ -109,10 +112,9 @@ html {
 }
 
 .catchphrase {
-    color: white;
+    color: rgb(38, 69, 95);
     font-family: "sequel";
-    font-size: 160px;
-    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    font-size: 180px;
 }
 
 #extraInfo {
@@ -169,33 +171,69 @@ html {
 
 #background {
     display: flex;
+    background-color: white;
+    background-image: url(/img/background.jpg);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    width: 100%;
+    height: 1460px;
 }
 
-#Column {
-    width: 33.33%;
-    height: 1700px;
+.columns {
+    width: 60%;
+    display: flex;
 }
 
-.leftColumn {
-    background-color: rgba(0, 0, 0, 0.5);
+.backgroundImage {
+    width: 40%;
+    justify-content: center;
+    padding-left: 160px;
+    padding-top: 80px;
 }
 
-.middleColumn {
-    background-color: rgba(0, 0, 0, 0.4);
+.rightColumn, .middleColumn, .leftColumn {
+    background-color: rgba(38, 69, 95, 0.8);
+    text-align: center;
+    padding: 30px;
+    margin: 20px 20px 0px 10px;
+    border-radius: 790px 790px 0px 0px;
 }
 
-.rightColumn {
-    background-color: rgba(0, 0, 0, 0.5);
+.cHeader {
+    color: black;
+    font-size: 50px;
+    font-family: 'Mindset Slim', serif;
+    color: white;
+    padding-top: 30px;
+}
+
+.cPara {
+    padding-top: 30px;
+    font-size: 37px;
+    font-family: 'NN Nouvelle Grotesk STD', serif;
+    color: white;
+}
+
+#moreInformation {
+    background-color: rgb(38, 69, 95);
+    width: 100%;
+    height: 1450px;
+}
+
+.moreInfoHeader {
+    font-family: "Muli";
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    padding-top: 100px;
 }
 
 .moreInfoPara {
-    width: 100%;
-    height: 1600px;
-    font-size: 45px;
+    padding-top: 50px;
+    font-size: 40px;
     font-family: "Muli";
     text-align: center;
-    padding: 50px;
-    background-color: rgb(38, 69, 95);
     color: white;
 }
 
@@ -282,10 +320,8 @@ textarea {
 }
 
 .fab {
-    margin-top: 10px;
-    color: rgba(255,255,255, 0.5);
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 30px;
+    color: rgba(255,255,255, 0.7);
     transition: color 0.35s ease-in-out;
 }
 
