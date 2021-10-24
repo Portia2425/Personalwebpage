@@ -12,7 +12,7 @@ html {
     display: flex;
     padding: 40px 30px;
     background-color: rgb(38, 69, 95);
-    align-content: center;
+    align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
@@ -32,7 +32,6 @@ html {
     background-color: transparent;
     border-color: transparent;
 }
-
 
 .navButtons {
     padding: 15px;
@@ -82,7 +81,7 @@ html {
     overflow: hidden;
     background-size: cover;
     width: 100%;
-    height: 1250px;
+    height: 100vh;
     text-align: center;
     justify-content: center;
     position: relative;
@@ -117,6 +116,7 @@ html {
     font-size: 180px;
 }
 
+/* extra info of website/ hover images */
 #extraInfo {
     width: 100%;
     height: 1050px;
@@ -160,7 +160,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 25px;
     opacity: 0;
     transition: opacity 0.4s ease-in-out; 
 }
@@ -169,15 +169,18 @@ html {
     opacity: 1;
 }
 
+h5 {
+    font-size: 45px;
+}
+/* background information of website */
 #background {
     display: flex;
-    background-color: white;
-    background-image: url(/img/background.jpg);
+    background-image: url(/img/background2.jpg);
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: cover;
     width: 100%;
-    height: 1460px;
+    height: 100vh;
 }
 
 .columns {
@@ -193,36 +196,37 @@ html {
 }
 
 .rightColumn, .middleColumn, .leftColumn {
-    background-color: rgba(38, 69, 95, 0.8);
+    background-color: rgba(38, 69, 95, 0.9);
     text-align: center;
     padding: 30px;
     margin: 20px 20px 0px 10px;
     border-radius: 790px 790px 0px 0px;
+    align-items: center;
 }
 
 .cHeader {
     color: black;
     font-size: 50px;
-    font-family: 'Mindset Slim', serif;
+    font-family: sans-serif, "rubik";
     color: white;
-    padding-top: 30px;
 }
 
 .cPara {
     padding-top: 30px;
     font-size: 37px;
-    font-family: 'NN Nouvelle Grotesk STD', serif;
+    font-family: sans-serif, "rubik";
     color: white;
 }
 
+/* more information section of website */
 #moreInformation {
     background-color: rgb(38, 69, 95);
     width: 100%;
-    height: 1450px;
+    height: 100vh;
 }
 
 .moreInfoHeader {
-    font-family: "Muli";
+    font-family: sans-serif, "rubik";
     text-align: center;
     color: white;
     font-size: 60px;
@@ -232,20 +236,120 @@ html {
 .moreInfoPara {
     padding-top: 50px;
     font-size: 40px;
-    font-family: "Muli";
+    font-family: sans-serif, "rubik";
     text-align: center;
     color: white;
 }
 
-.contactUs {
-    background-color: rgba(0, 0, 0, 0.5);
+/* faq section of website */
+#faqSection {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 100vh; 
+    background-image: url(/img/faq_background.jpg);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.faqHeader {
+    height: 850px;
+}
+
+.accordian {
+    padding: 10px 10px;
+    width: 100%;
+    background-color: transparent;
+    border: 4px solid white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+#one, #two {
+    padding: 0 15px;
+    border-left: 3px solid white;
+    color: white;
+    font-size: 33px;
+    text-align: justify;
+    height: 300px;
+    margin-left: 100px;
+    display: flex;
+    display: none;
+    font-family: sans-serif, "rubik";
+}
+
+#three, #four {
+    padding: 0 15px;
+    border-left: 3px solid white;
+    color: white;
+    font-size: 33px;
+    text-align: justify;
+    height: 250px;
+    margin-left: 100px;
+    display: flex;
+    display: none;
+    font-family: sans-serif, "rubik";
+}
+
+.fas {
+    color: rgba(255,255,255, 0.8);
+    transform: rotate(0deg);
+    margin: auto;
+    cursor: pointer;
+}
+
+.fas:hover {
+    color: white;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+#f_header {
+    font-size: 45px;
+    padding-left: 15px;
+    font-family: sans-serif, "rubik";
+}
+
+.faq_h {
+    color: black;
+    font-size: 90px;
+    padding-left: 250px;
+    padding-top: 50px;
+    font-family: sans-serif, "rubik";
+}
+
+.faq_p {
+    color: rgb(47, 106, 161);
+    font-size: 65px;
+    padding-left: 250px;
+    padding-top: 100px;
+    font-family: sans-serif, "rubik";
+}
+
+.questions {
+    font-family: 'Muli';
+    width: 40%;
+    margin: 0 auto;
+    margin-top: -100px;
+
+}
+
+.contactUs {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
+    overflow-y: scroll;
     z-index: 100;
     display: none;
 }
@@ -267,6 +371,10 @@ html {
     font-size: 65px;
     transform: rotate(45deg);
     cursor: pointer;
+    color: rgba(255,255,255, 0.5);
+}
+
+.close:hover {
     color: white;
 }
 
@@ -321,7 +429,7 @@ textarea {
 
 .fab {
     padding: 30px;
-    color: rgba(255,255,255, 0.7);
+    color: rgba(255,255,255, 0.8);
     transition: color 0.35s ease-in-out;
 }
 
@@ -332,6 +440,7 @@ textarea {
 
 
 .footer {
+    background-color: rgb(38, 69, 95);
     padding: 10px 20px;
     width: 100%;
     text-align: center;
@@ -339,5 +448,3 @@ textarea {
     font-family: "Muli";
     font-size: 30px;
 }
-
-
