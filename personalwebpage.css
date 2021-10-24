@@ -1,6 +1,7 @@
 * , *::after {
     box-sizing: border-box;
     margin: 0;
+    list-style: none;
 }
 
 html {
@@ -243,103 +244,75 @@ h5 {
 
 /* faq section of website */
 #faqSection {
-    width: 100%;
-    height: 100vh; 
     background-image: url(/img/faq_background.jpg);
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: cover;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif, "rubik";
 }
 
 .faqHeader {
-    height: 850px;
-}
-
-.accordian {
-    padding: 10px 10px;
-    width: 100%;
-    background-color: transparent;
-    border: 4px solid white;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    margin: 40px;
-    color: white;
-    cursor: pointer;
-}
-
-#one, #two {
-    padding: 0 15px;
-    border-left: 3px solid white;
-    color: white;
-    font-size: 33px;
-    text-align: justify;
-    height: 300px;
-    margin-left: 100px;
-    display: flex;
-    display: none;
-    font-family: sans-serif, "rubik";
-}
-
-#three, #four {
-    padding: 0 15px;
-    border-left: 3px solid white;
-    color: white;
-    font-size: 33px;
-    text-align: justify;
-    height: 250px;
-    margin-left: 100px;
-    display: flex;
-    display: none;
-    font-family: sans-serif, "rubik";
-}
-
-.fas {
-    color: rgba(255,255,255, 0.8);
-    transform: rotate(0deg);
-    margin: auto;
-    cursor: pointer;
-}
-
-.fas:hover {
-    color: white;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-}
-
-#f_header {
-    font-size: 45px;
-    padding-left: 15px;
-    font-family: sans-serif, "rubik";
-}
-
-.faq_h {
-    color: black;
-    font-size: 90px;
-    padding-left: 250px;
-    padding-top: 50px;
-    font-family: sans-serif, "rubik";
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 150px;
 }
 
 .faq_p {
-    color: rgb(47, 106, 161);
     font-size: 65px;
-    padding-left: 250px;
-    padding-top: 100px;
-    font-family: sans-serif, "rubik";
+    color: rgb(33, 75, 114);
 }
 
-.questions {
-    font-family: 'Muli';
-    width: 40%;
+.faq_h {
+    font-size: 120px;
+}
+
+.accordian__button {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px;
+    border: 3px solid white;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: left;
+    color: white;
+    font-size: 35px;
     margin: 0 auto;
-    margin-top: -100px;
-
+    margin-top: 90px;
 }
 
+.accordian__button::after {
+    content: '\002B';
+    float: right;
+}
+
+.accordian__button--active {background-color: transparent;}
+.accordian__button--active::after {content: '\002B'; transform: rotate(45deg);}
+
+.accordian__content {
+    display: none;
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 28px;
+    height: 100px;
+    padding: 0 15px;
+    background-color: transparent;
+    color: white;
+}
+
+.accordian__para {
+    padding-top: 12.5px;
+}
+
+.accordian__para1 {
+    padding-top: 25px;
+}
+
+/* contact us popup */
 .contactUs {
     background-color: rgba(0, 0, 0, 0.3);
     width: 100vw;
