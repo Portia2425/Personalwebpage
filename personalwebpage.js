@@ -36,6 +36,22 @@ document.querySelectorAll('.accordian__button').forEach(button => {
   });
 });
 
-// loop in the footer
+// new zealand image rollover
+let images = new Array ("img/nz_2.png","img/nz_3.png", "img/nz_4.png", "img/nz_5.png")
 
-// 
+let i = 0;
+
+function rollover (image_id, millisecs) {
+  let image = document.getElementById(image_id);
+  image.src = images[i];
+  i++;
+
+  if (i >= images.length) {
+    i = 0;
+  } 
+
+  setTimeout("rollover('" + image_id + "'," + millisecs + ");",millisecs);
+}
+
+rollover("image1",2500);
+

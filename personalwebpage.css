@@ -173,6 +173,7 @@ html {
 h5 {
     font-size: 45px;
 }
+
 /* background information of website */
 #background {
     display: flex;
@@ -189,12 +190,6 @@ h5 {
     display: flex;
 }
 
-.backgroundImage {
-    width: 40%;
-    justify-content: center;
-    padding-left: 160px;
-    padding-top: 80px;
-}
 
 .rightColumn, .middleColumn, .leftColumn {
     background-color: rgba(38, 69, 95, 0.9);
@@ -244,7 +239,7 @@ h5 {
 
 /* faq section of website */
 #faqSection {
-    background-image: url(/img/faq_background.jpg);
+    background-image: url(/img/faq_background.png);
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: cover;
@@ -292,8 +287,8 @@ h5 {
 .accordian__button--active::after {content: '\002B'; transform: rotate(45deg);}
 
 .accordian__content {
-    display: none;
     display: block;
+    display: none;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
