@@ -1,13 +1,13 @@
 // scrollable navbar
-let prevScrollpos = window.pageYOffset;
+let prevScrollPos = window.pageYOffset;
 window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  let currentScroll = window.pageYOffset;
+  if (prevScrollPos > currentScroll) {
     document.getElementById("navbar").style.top = "0";
   } else {
     document.getElementById("navbar").style.top = "-200px";
   }
-  prevScrollpos = currentScrollPos;
+  prevScrollPos = currentScroll;
 } 
 
 // pop up form
@@ -53,5 +53,38 @@ function rollover (image_id, millisecs) {
   setTimeout("rollover('" + image_id + "'," + millisecs + ");",millisecs);
 }
 
-rollover("image1",2500);
+rollover("image1",2000);
+
+// loop function
+
+// contact form validation
+function validation() {
+  let name = getElementById("name").value;
+  let email = getElementById("email").value;
+  let subject = getElementById("subject").value;
+  let errorMessage = getElementById("errorMessage");
+  let text;
+
+  errorMessage.style.padding = "15px";
+
+  if (name.length < 3) {
+    text = "Please enter a valid name";
+    errorMessage.innerHTML = text;
+    return false;
+  };
+
+  if (email.length < 3) {
+    text = 'Please enter a valid email';
+    errorMessage.innerHTML = text;
+    return false;
+  };
+
+  if (subject.length > 3) {
+    let text = 'Please enter a valid subject';
+    errorMessage.innerHTML = text;
+    return false;
+  };
+
+  return false;
+}
 

@@ -195,17 +195,18 @@
             <div class="contactUs">
                 <div id="formContent">
                     <div class="close">+</div>
-                    <img src="img/threewaters-logo-primary.png" width="400px" height="100px">
                     <h3> Get in touch</h3>
                     <p class="find-us">Please contact us with any queries.</p>
+                    <div id="errorMessage"></div>
 
-                    <form action="mailto:info@dia.govt.nz.">
-                        <label></label><input type="name" name="name" placeholder="Name"> <br> <br>
-                        <label></label><input type="email" name="email" placeholder="Email"> <br> <br>
+                    <form onsubmit="return validation()">
+                        <label></label><input id="name" type="name" name="name" placeholder="Name"> <br> <br>
+                        <label></label><input id="email"  type="email" name="email" placeholder="Email"> <br> <br>
+                        <label></label><input id="subject"  type="subject" name="subject" placeholder="Subject"> <br> <br>
+                        <br><br>
                         <textarea placeholder="Your message"></textarea> <br> <br>
-                        <input class="submit" type="submit" 
-                        value="Submit">
-                        
+                        <input id="submit" type="submit" 
+                        value="submit">
                     </form>
                 </div>
             </div>  
