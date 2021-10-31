@@ -62,6 +62,7 @@ function validate(){
   let error_message = document.getElementById("error_message");
   
   let text;
+  
   if(name.length < 3){
     text = "Please enter valid name";
     error_message.innerHTML = text;
