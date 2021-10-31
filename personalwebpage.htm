@@ -23,7 +23,7 @@
                     <a class="navButtons" href="#background">Background</a> 
                     <a class="navButtons" href="#moreInformation">More information</a>
                     <a class="navButtons" href="#faqSection">FAQ</a>
-                    <button id="contactButton" class="navButtons">Contact us</button>
+                    <button id="contactButton" class="navButtons" onclick="popupOpen()">Contact us</button>
                 </div>
             </div>
         </header>
@@ -32,25 +32,6 @@
         <div id="slogan">
             <div class="slogan-search">
                 <h1 class="catchphrase"> Better water is <br> better for everyone</h1>
-
-                <!-- social icons/links -->
-                <div id="socialLinks">
-                    <a href="https://www.facebook.com/ThreeWatersNZGovt" target="_blank">
-                        <i class="fab fa-facebook fa-4x"></i>
-                    </a>
-                    
-                    <a href="https://www.instagram.com/ThreeWatersNZ/" target="_blank">
-                        <i class="fab fa-instagram fa-4x"></i>
-                    </a>
-                    
-                    <a href="https://www.youtube.com/c/threewatersnz" target="_blank">
-                        <i class="fab fa-youtube fa-4x"></i>
-                    </a>
-                    
-                    <a href="https://twitter.com/threewatersnz" target="_blank">
-                        <i class="fab fa-twitter fa-4x"></i>
-                    </a>
-                </div>
             </div>
         </div>
 
@@ -194,19 +175,16 @@
         <section>
             <div class="contactUs">
                 <div id="formContent">
-                    <div class="close">+</div>
+                    <button class="close" onclick="popupClose()">+</button>
                     <h3> Get in touch</h3>
                     <p class="find-us">Please contact us with any queries.</p>
-                    <div id="errorMessage"></div>
+                    <div id='error_message'></div>
 
-                    <form onsubmit="return validation()">
+                    <form onsubmit="return validate()">
                         <label></label><input id="name" type="name" name="name" placeholder="Name"> <br> <br>
                         <label></label><input id="email"  type="email" name="email" placeholder="Email"> <br> <br>
-                        <label></label><input id="subject"  type="subject" name="subject" placeholder="Subject"> <br> <br>
-                        <br><br>
-                        <textarea placeholder="Your message"></textarea> <br> <br>
-                        <input id="submit" type="submit" 
-                        value="submit">
+                        <textarea id="message" placeholder="Your message"></textarea> <br> <br>
+                        <input id="submit" type="submit" value="SUBMIT">
                     </form>
                 </div>
             </div>  
@@ -214,9 +192,52 @@
 
         <!-- footer -->
         <div class="footer">
-            Copyright 2021 by Three Waters. All rights reserved.
-        </div>
-    </body>
+            <div class="footer__content">
+                <div class="leftcolumnFooter">
+                    <form>
+                        <label>Sign up for our newsletter</label><input id="email" type="email" name="emailNL" placeholder="email address" required>
+                        <button type="submit" class="send_btn"><i class="fas fa-paper-plane fa-2x"></i></button>
+                    </form>
 
-    <script src="personalwebpage.js"></script>
+                    <!-- social icons/links -->
+                    <div id="socialLinks">
+                        <a href="https://www.facebook.com/ThreeWatersNZGovt" target="_blank">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/ThreeWatersNZ/" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        
+                        <a href="https://www.youtube.com/c/threewatersnz" target="_blank">
+                            <i class="fab fa-youtube fa-2x"></i>
+                        </a>
+                        
+                        <a href="https://twitter.com/threewatersnz" target="_blank">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rightcolumnFooter">
+                    <img class="footer_logo" src="/img/threewaters-logo-primary.png" width="300px" height="80px">
+                    <a class="govt_link" href="https://www.govt.nz/" target="_blank">
+                        <img src="/img/nzgovt.png" width="500px" height="100px"> 
+                    </a>
+
+                    <div class="list_nav">
+                        <a class="nav_footer" href="#background"><li>Background</li></a>
+                        <a class="nav_footer" href="#moreInformation"><li>More Information</li></a>
+                        <a class="nav_footer" href="https://www.beehive.govt.nz/" target="_blank"><li>Beehive Website</li></a>
+                        <a class="nav_footer" href="https://www.dia.govt.nz/Three-Waters-Reform-Programme" target="_blank"><li>DIA Three Waters Website</li></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- copyright -->
+           <p class="copyright">Copyright 2021 by Three Waters. All rights reserved.</p> 
+        </div>
+
+        <script src="personalwebpage.js"></script>
+    </body>
 </html>

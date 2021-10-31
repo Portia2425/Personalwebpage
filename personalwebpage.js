@@ -10,16 +10,15 @@ window.onscroll = function() {
   prevScrollPos = currentScroll;
 } 
 
-// pop up form
-document.getElementById('contactButton').addEventListener('click', 
-function() {
+// contact us modal
+function popupOpen() {
   document.querySelector('.contactUs').style.display = 'flex';
-});
+};
 
-document.querySelector('.close').addEventListener('click', 
-function() {
+function popupClose() {
   document.querySelector('.contactUs').style.display = 'none';
-});
+}
+
 
 // faq section
 document.querySelectorAll('.accordian__button').forEach(button => {
@@ -55,36 +54,33 @@ function rollover (image_id, millisecs) {
 
 rollover("image1",2000);
 
-// loop function
-
 // contact form validation
-function validation() {
-  let name = getElementById("name").value;
-  let email = getElementById("email").value;
-  let subject = getElementById("subject").value;
-  let errorMessage = getElementById("errorMessage");
+function validate(){
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+  let error_message = document.getElementById("error_message");
+  
   let text;
-
-  errorMessage.style.padding = "15px";
-
-  if (name.length < 3) {
-    text = "Please enter a valid name";
-    errorMessage.innerHTML = text;
+  if(name.length < 3){
+    text = "Please enter valid name";
+    error_message.innerHTML = text;
     return false;
   };
 
-  if (email.length < 3) {
-    text = 'Please enter a valid email';
-    errorMessage.innerHTML = text;
+  if(email.indexOf("@") === -1 || email.length < 5){
+    text = "Please enter valid email";
+    error_message.innerHTML = text;
     return false;
   };
 
-  if (subject.length > 3) {
-    let text = 'Please enter a valid subject';
-    errorMessage.innerHTML = text;
+  if(message.length <= 30){
+    text = "Please enter more than 30 characters";
+    error_message.innerHTML = text;
     return false;
   };
 
-  return false;
-}
+  alert("Form Submitted Successfully!");
+  return true;
+};
 
