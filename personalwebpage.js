@@ -81,6 +81,7 @@ function validate(){
   };
 
   alert("Form Submitted Successfully!");
+  document.querySelector('.contactUs').style.display = 'none';
   return true;
 };
 
