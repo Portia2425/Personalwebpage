@@ -20,7 +20,7 @@
                     <a class="navButtons" href="#background">Background</a> 
                     <a class="navButtons" href="#moreInformation">More information</a>
                     <a class="navButtons" href="#faqSection">FAQ</a>
-                    <button id="contactButton" class="navButtons" onclick="popupOpen()">Contact us</button>
+                    <button id="contactButton" class="navButtons" onclick="modalOpen()">Contact us</button>
                 </div>
             </div>
         </header>
@@ -121,8 +121,7 @@
                     </p>
                 </div>  
 
-                <img src="/img/nz_2.png" id="image1">   
-            
+                <img src="/img/nz_2.png" id="image1"> 
             </div>
         </section>
 
@@ -204,15 +203,17 @@
         <section>
             <div class="contactUs">
                 <div id="formContent">
-                    <button class="close" onclick="popupClose()">+</button>
+                    <button class="close" onclick="modalClose()">+</button>
                     <h3> Get in touch</h3>
                     <p class="find-us">Please contact us with any queries.</p>
-                    <div id='error_message'></div>
 
                     <form onsubmit="return validate()">
-                        <label></label><input id="name" type="name" name="name" placeholder="Name"> <br> <br>
-                        <label></label><input id="email"  type="email" name="email" placeholder="Email"> <br> <br>
-                        <textarea id="message" placeholder="Your message"></textarea> <br> <br>
+                        <label></label><input id="name" type="name" name="name" placeholder="Name"> <br> 
+                        <div id='error_message_name'></div> <br> 
+                        <label></label><input id="email"  type="email" name="email" placeholder="Email"> <br>
+                        <div id='error_message_email'></div> <br>
+                        <textarea id="message" placeholder="Your message"></textarea> <br> 
+                        <div id='error_message_message'></div> <br> 
                         <input id="submit" type="submit" value="SUBMIT">
                     </form>
                 </div>
@@ -224,8 +225,8 @@
             <div class="footer__content">
                 <div class="leftcolumnFooter">
                     <form>
-                        <label>Sign up for our newsletter</label><input id="email" type="email" name="emailNL" placeholder="email address" required>
-                        <button type="submit" class="send_btn"><i class="fas fa-paper-plane fa-2x"></i></button>
+                        <label>Sign up for our newsletter </label><input id="email" type="email" name="emailNL" placeholder="email address" required>
+                        <button type="submit" class="send_btn"><i class="fas fa-paper-plane fa-3x"></i></button>
                     </form>
 
                     <!-- social icons/links -->
